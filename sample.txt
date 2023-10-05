@@ -1,0 +1,26 @@
+ var currentday =today.getDay();
+    var day ="";
+
+    if(currentday===6 || currentday=== 0){
+        day = "weekend";
+        // res.sendFile(__dirname+"/weekend.html");
+        
+    }else{
+        day = "weekday";
+        // res.sendFile(__dirname+"/weekday.html");
+
+    }
+    // res.status("list")
+    // res.json({kindofday:day});
+
+
+
+
+    app.post("/work", function(req, res) {
+    let item =res.body.newitem;
+    items.push(item);
+    console.log(res.body);
+
+    res.redirect("/work");
+
+ });
